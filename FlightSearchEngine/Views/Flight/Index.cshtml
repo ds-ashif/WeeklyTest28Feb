@@ -1,0 +1,28 @@
+﻿@model FlightSearchEngine.Models.ViewModels.SearchViewModel
+
+@{
+    ViewData["Title"] = "Flight Search";
+}
+
+<h2>Flight Search Page Working ✅</h2>
+
+<form asp-action="SearchFlights" method="post">
+
+    <label>Source</label>
+    <select asp-for="Source" asp-items="Model.SourceList"></select>
+
+    <br /><br />
+
+    <label>Destination</label>
+    <select asp-for="Destination" asp-items="Model.DestinationList"></select>
+
+    <br /><br />
+
+    <label>Persons</label>
+    <input asp-for="NumberOfPersons" />
+
+    <br /><br />
+
+    <button type="submit">Search Flights</button>
+
+</form>
